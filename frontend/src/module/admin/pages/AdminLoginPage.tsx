@@ -1,13 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { normalizePhoneNumber } from '../../../core/utils/phoneNumber';
 import { loginWithOtp } from '../../auth/services/auth.service';
+import { useAuth } from '../../../core/context/AuthContext';
 
 export const AdminLoginPage = () => {
     const navigate = useNavigate();
+    const { isAuthenticated, user } = useAuth();
     const [formData, setFormData] = useState<{ phone: string }>({
         phone: '',
     });
+
+    useEffect(() => {
+        if (isAuthenticated && user?.role === 'admin') {
+            navigate('/admin/dashboard', { replace: true });
+        }
+    }, [isAuthenticated, user, navigate]);
     const [errors, setErrors] = useState<{ phone?: string }>({});
     const [isLoading, setIsLoading] = useState(false);
     const [apiError, setApiError] = useState<string | null>(null);

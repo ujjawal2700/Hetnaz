@@ -78,9 +78,11 @@ apiClient.interceptors.response.use(
       // Remove invalid token
       removeAuthToken();
 
-      // Redirect to login
-      if (window.location.pathname !== '/login') {
-        window.location.href = '/login';
+      // Redirect to login — preserve admin login path so admin users land on /admin/login
+      const currentPath = window.location.pathname;
+      if (currentPath !== '/login' && currentPath !== '/admin/login') {
+        const isAdminPath = currentPath.startsWith('/admin');
+        window.location.href = isAdminPath ? '/admin/login' : '/login';
       }
     }
 
