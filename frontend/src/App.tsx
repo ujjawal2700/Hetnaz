@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './core/queries/queryClient';
@@ -112,15 +112,32 @@ function AppContent() {
   }
 
   return (
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
+  );
+}
+
+// Route-aware shell. The male/female experience is a mobile app rendered inside
+// a fixed 600px "phone frame"; the admin panel is a full-width desktop dashboard
+// (fixed sidebar + lg:ml-64 content) and must break out of that frame.
+function AppShell() {
+  const { pathname } = useLocation();
+  const isAdminRoute = pathname.startsWith('/admin');
+
+  return (
     <div className="min-h-screen bg-[#0a0a0a] flex justify-center overflow-x-hidden">
-      <div className="w-full max-w-[600px] min-h-screen bg-white dark:bg-[#0a0a0a] shadow-[0_0_100px_rgba(0,0,0,0.8)] relative flex flex-col">
+      <div
+        className={`w-full min-h-screen bg-white dark:bg-[#0a0a0a] relative flex flex-col ${
+          isAdminRoute ? '' : 'max-w-[600px] shadow-[0_0_100px_rgba(0,0,0,0.8)]'
+        }`}
+      >
         <FCMInitializer />
         <SocketProvider>
           <SocketQuerySync />
           <GlobalStateProvider>
             <VideoCallProvider>
-              <BrowserRouter>
-                <div className="flex-1 flex flex-col relative overflow-hidden">
+              <div className="flex-1 flex flex-col relative overflow-hidden">
                   <Suspense fallback={<PageLoader />}>
                     <Routes>
                       {/* Landing page → default to language selection */}
@@ -206,7 +223,6 @@ function AppContent() {
                   <VideoCallModal />
                   <InAppNotificationToast />
                 </div>
-              </BrowserRouter>
             </VideoCallProvider>
           </GlobalStateProvider>
         </SocketProvider>
