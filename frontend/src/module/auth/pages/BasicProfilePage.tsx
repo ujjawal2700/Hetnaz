@@ -103,7 +103,7 @@ export const BasicProfilePage = () => {
         </div>
 
         {/* Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+        <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Date of Birth */}
             <div>

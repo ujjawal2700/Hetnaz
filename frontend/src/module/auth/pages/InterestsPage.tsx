@@ -260,7 +260,7 @@ export const InterestsPage = () => {
         </div>
 
         {/* Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+        <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8">
           {apiError && (
             <div className="mb-4 p-3 bg-red-50 text-red-700 rounded-lg text-sm">
               {apiError}
