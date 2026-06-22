@@ -9,8 +9,6 @@ import { useMaleNavigation } from '../hooks/useMaleNavigation';
 import { useTranslation } from '../../../core/hooks/useTranslation';
 import { useOptimizedChatList } from '../../../core/hooks/useOptimizedChatList';
 import { useDiscoveryProfiles } from '../../../core/queries/useDiscoveryQuery';
-import { BadgeDisplay } from '../../../shared/components/BadgeDisplay';
-import { MaterialSymbol } from '../../../shared/components/MaterialSymbol';
 import { DailyRewardModal } from '../../../shared/components/DailyRewardModal';
 import { useGlobalState } from '../../../core/context/GlobalStateContext';
 import apiClient from '../../../core/api/client';
@@ -178,65 +176,6 @@ export const MaleDashboard = () => {
           nearbyUsers={nearbyUsers}
           onExploreClick={handleExploreClick}
         />
-
-        {/* Achievements Section "The Vault" Teaser */}
-        <div className="px-4 mb-8">
-          <div className="skeuo-card bg-mesh-glass rounded-[2.5rem] p-6 relative overflow-hidden group shadow-2xl border-white/60 dark:border-white/5">
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 via-transparent to-rose-500/5 pointer-events-none" />
-            
-            <div className="relative">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="skeuo-inset size-10 rounded-2xl flex items-center justify-center bg-primary/10">
-                    <MaterialSymbol name="workspace_premium" className="text-primary drop-shadow-[0_2px_8_rgba(255,217,61,0.3)]" size={24} filled />
-                  </div>
-                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-900 dark:text-white">{t('badges')}</h3>
-                </div>
-                <button
-                  onClick={() => navigate('/male/badges')}
-                  className="text-[10px] font-black uppercase tracking-widest text-primary hover:scale-105 transition-transform"
-                >
-                  {t('viewAll')}
-                </button>
-              </div>
-
-              {user?.badges && user.badges.length > 0 ? (
-                <div className="bg-white/10 backdrop-blur-md rounded-[1.5rem] p-4 border border-white/20">
-                  <BadgeDisplay
-                    badges={user.badges}
-                    maxDisplay={5}
-                    showUnlockedOnly={true}
-                    compact={true}
-                    onBadgeClick={() => navigate('/male/badges')}
-                  />
-                </div>
-              ) : (
-                <div className="relative overflow-hidden skeuo-inset rounded-[2rem] p-8 flex flex-col items-center justify-center text-center">
-                   <div className="absolute inset-0 bg-mesh-glass opacity-20" />
-                   
-                   <div className="relative size-16 skeuo-card rounded-full flex items-center justify-center mb-4 group-hover:animate-pulse-slow">
-                      <MaterialSymbol name="award_star" size={32} className="text-slate-300 dark:text-slate-600" />
-                      <div className="absolute inset-3 bg-pink-500/5 blur-[10px] rounded-full" />
-                   </div>
-                   
-                   <h4 className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-1">
-                      {t('unlockedCount')} 0
-                   </h4>
-                   <p className="relative z-10 text-[11px] font-bold text-slate-400/80 dark:text-slate-600 mb-4 tracking-wide max-w-[200px]">
-                      {t('noBadgesYet')}
-                   </p>
-                   
-                   <button
-                      onClick={() => navigate('/male/badges')}
-                      className="relative z-10 skeuo-button px-6 h-10 rounded-xl flex items-center justify-center transition-all active:scale-95 group/btn"
-                   >
-                      <span className="text-[10px] font-black uppercase tracking-widest text-primary group-hover/btn:scale-105 transition-transform">{t('Explore achievements')}</span>
-                   </button>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
 
         <ActiveChatsList
           chats={activeChatsForDisplay}

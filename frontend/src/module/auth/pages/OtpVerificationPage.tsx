@@ -186,7 +186,7 @@ export const OtpVerificationPage = () => {
                 </div>
 
                 {/* glass-card wrapper */}
-                <div className="glass-card rounded-[2.5rem] p-8 shadow-2xl border border-white/40">
+                <div className="glass-card rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-8 shadow-2xl border border-white/40">
                     <div className="text-center mb-8">
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">{t('verifyYourPhone')}</h2>
                         <p className="text-gray-500 text-sm font-medium">
@@ -200,7 +200,7 @@ export const OtpVerificationPage = () => {
                                 <label className="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">
                                     {t('Enter 6-digit code')}
                                 </label>
-                                <div className="flex justify-center gap-3">
+                                <div className="flex justify-center gap-1.5 xs:gap-2 sm:gap-3">
                                     {otp.map((digit, index) => (
                                         <input
                                             key={index}
@@ -212,7 +212,7 @@ export const OtpVerificationPage = () => {
                                             value={digit}
                                             onChange={(e) => handleChange(e.target, index)}
                                             onKeyDown={(e) => handleKeyDown(e, index)}
-                                            className={`w-12 h-14 text-center text-2xl font-black rounded-2xl border-2 transition-all duration-300 bg-white/50 focus:outline-none ${digit 
+                                            className={`w-9 h-11 xs:w-10 xs:h-12 sm:w-12 sm:h-14 text-center text-lg sm:text-2xl font-black rounded-xl sm:rounded-2xl border-2 transition-all duration-300 bg-white/50 focus:outline-none ${digit 
                                                 ? 'border-pink-500 text-pink-600 shadow-[0_0_15px_rgba(236,72,153,0.2)]' 
                                                 : 'border-gray-100 text-gray-900 focus:border-pink-300'
                                             }`}
@@ -233,7 +233,7 @@ export const OtpVerificationPage = () => {
                                 <button
                                     type="submit"
                                     disabled={isLoading || otp.join('').length !== 6}
-                                    className="relative w-full py-4 bg-premium-pink text-white font-black text-lg rounded-2xl shadow-[0_10px_25px_-5px_rgba(255,77,109,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(255,77,109,0.5)] transform hover:scale-[1.02] active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale overflow-hidden group"
+                                    className="relative w-full py-3 sm:py-4 bg-premium-pink text-white font-black text-base sm:text-lg rounded-2xl shadow-[0_10px_25px_-5px_rgba(255,77,109,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(255,77,109,0.5)] transform hover:scale-[1.02] active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale overflow-hidden group"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine transition-transform" />
                                     {isLoading ? (

@@ -223,17 +223,22 @@ export const MyProfilePage = () => {
 
         {/* Badges Exhibition */}
         {user?.badges && user.badges.length > 0 && (
-          <section className="px-4 mb-2">
-            <div className="skeuo-card rounded-[2rem] p-6 shadow-2xl bg-mesh-glass border-white/60 dark:border-white/5 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <section className="px-4 mb-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="skeuo-card rounded-[1.5rem] p-4 shadow-xl bg-mesh-glass border-white/60 dark:border-white/5 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full -mr-12 -mt-12 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
               <div className="relative">
-                <div className="flex items-center justify-between mb-5 px-1">
-                  <div className="flex items-center gap-3">
-                    <div className="skeuo-inset size-10 rounded-2xl flex items-center justify-center bg-primary/10 text-primary">
-                      <MaterialSymbol name="workspace_premium" size={24} filled />
+                <div className="flex items-center justify-between mb-3 px-1">
+                  <div className="flex items-center gap-2.5">
+                    <div className="skeuo-inset size-8 rounded-xl flex items-center justify-center bg-primary/10 text-primary">
+                      <MaterialSymbol name="workspace_premium" size={18} filled />
                     </div>
-                    <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-900 dark:text-white">{t('achievementVault')}</h3>
+                    <div>
+                      <h3 className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-900 dark:text-white leading-none mb-1">{t('achievementVault')}</h3>
+                      <span className="text-[8px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+                        {user.badges.filter(b => b.isUnlocked).length} / {user.badges.length} {t('collected')}
+                      </span>
+                    </div>
                   </div>
                   <button
                     onClick={() => navigate('/male/badges')}
@@ -243,7 +248,7 @@ export const MyProfilePage = () => {
                   </button>
                 </div>
                 
-                <div className="skeuo-inset rounded-[2rem] p-4 bg-transparent dark:bg-black/40 border border-white/40 dark:border-white/5">
+                <div className="skeuo-inset rounded-xl p-3 bg-transparent dark:bg-black/20 border border-white/20 dark:border-white/5">
                   <BadgeDisplay
                     badges={user.badges}
                     maxDisplay={6}
@@ -251,12 +256,6 @@ export const MyProfilePage = () => {
                     compact={true}
                     onBadgeClick={() => navigate('/male/badges')}
                   />
-                </div>
-
-                <div className="mt-5 pt-4 flex justify-center">
-                  <span className="px-4 py-1.5 rounded-full skeuo-button text-[9px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-600 bg-white/20 dark:bg-black/10">
-                    {user.badges.filter(b => b.isUnlocked).length} / {user.badges.length} {t('collected')}
-                  </span>
                 </div>
               </div>
             </div>

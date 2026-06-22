@@ -266,14 +266,14 @@ export const SignupPage = () => {
         </div>
 
         {/* glass-card wrapper */}
-        <div className="glass-card rounded-[2.5rem] p-8 shadow-2xl border border-white/40">
+        <div className="glass-card rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-8 shadow-2xl border border-white/40">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">{t('Create Your Account')}</h2>
             <p className="text-gray-500 text-sm font-medium">{t('Start your journey to find meaningful connections')}</p>
           </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="fullName" className="block text-sm font-bold text-gray-700 mb-2 ml-1">
+              <label htmlFor="fullName" className="block text-sm font-bold text-gray-700 mb-2 ml-0.5 sm:ml-1">
                 {t('Full Name')}
               </label>
               <div className="relative group">
@@ -286,22 +286,22 @@ export const SignupPage = () => {
                     type="text"
                     value={formData.fullName}
                     onChange={(e) => handleChange('fullName', e.target.value)}
-                    className="w-full px-4 py-4 bg-transparent text-gray-900 text-lg font-bold placeholder:text-gray-300 focus:outline-none"
+                    className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-transparent text-gray-900 text-base sm:text-lg font-bold placeholder:text-gray-300 focus:outline-none"
                     placeholder={t('Enter full name')}
                     disabled={isSubmitting}
                   />
                 </div>
-                {errors.fullName && <p className="mt-2 ml-1 text-xs font-bold text-red-500">{errors.fullName}</p>}
+                {errors.fullName && <p className="mt-2 ml-0.5 sm:ml-1 text-xs font-bold text-red-500">{errors.fullName}</p>}
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="phone" className="block text-sm font-bold text-gray-700 ml-1">
+              <label htmlFor="phone" className="block text-sm font-bold text-gray-700 ml-0.5 sm:ml-1">
                 {t('Contact Number')}
               </label>
               <div className="relative group transition-all duration-300">
                 <div className={`flex items-center bg-white/50 border-2 rounded-2xl overflow-hidden transition-all duration-300 ${errors.phone ? 'border-red-400' : 'border-gray-100 group-hover:border-pink-200 focus-within:border-pink-500'}`}>
-                  <div className="flex items-center shrink-0 gap-1.5 pl-3 pr-2 py-4 bg-gray-50/30 border-r border-gray-100">
+                  <div className="flex items-center shrink-0 gap-1.5 pl-2.5 pr-2 py-3 sm:pl-3 sm:pr-2 sm:py-4 bg-gray-50/30 border-r border-gray-100">
                     <img
                       src="https://flagcdn.com/w40/in.png"
                       srcSet="https://flagcdn.com/w80/in.png 2x"
@@ -309,7 +309,7 @@ export const SignupPage = () => {
                       className="rounded-sm shadow-sm opacity-90"
                       alt="India Flag"
                     />
-                    <span className="text-gray-900 font-black text-base tracking-tight">+91</span>
+                    <span className="text-gray-900 font-black text-sm sm:text-base tracking-tight">+91</span>
                   </div>
                   <input
                     id="phone"
@@ -321,7 +321,7 @@ export const SignupPage = () => {
                       const final = val.length > 10 ? val.slice(-10) : val;
                       handleChange('phone', final);
                     }}
-                    className="w-full px-4 py-4 bg-transparent text-gray-900 text-lg font-bold placeholder:text-gray-300 focus:outline-none"
+                    className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-transparent text-gray-900 text-base sm:text-lg font-bold placeholder:text-gray-300 focus:outline-none"
                     placeholder="Mobile"
                     maxLength={10}
                     disabled={isSubmitting}
@@ -330,14 +330,14 @@ export const SignupPage = () => {
                     <button
                       type="button"
                       onClick={() => handleChange('phone', '')}
-                      className="pr-4 text-gray-300 hover:text-gray-500 transition-colors"
+                      className="pr-3 sm:pr-4 text-gray-300 hover:text-gray-500 transition-colors"
                     >
-                      <MaterialSymbol name="cancel" size={24} filled />
+                      <MaterialSymbol name="cancel" size={20} className="sm:scale-110" filled />
                     </button>
                   )}
                 </div>
                 {errors.phone && (
-                  <div className="flex items-center gap-1.5 mt-2 ml-1 text-red-500 animate-in fade-in slide-in-from-top-1">
+                  <div className="flex items-center gap-1.5 mt-2 ml-0.5 sm:ml-1 text-red-500 animate-in fade-in slide-in-from-top-1">
                     <MaterialSymbol name="error" size={16} filled />
                     <p className="text-xs font-bold leading-none">{errors.phone}</p>
                   </div>
@@ -346,7 +346,7 @@ export const SignupPage = () => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="referralCode" className="block text-sm font-bold text-gray-700 ml-1">
+              <label htmlFor="referralCode" className="block text-sm font-bold text-gray-700 ml-0.5 sm:ml-1">
                 {t('Referral ID')} <span className="text-gray-400 font-normal">({t('Optional')})</span>
               </label>
               <div className="relative group">
@@ -359,7 +359,7 @@ export const SignupPage = () => {
                     type="text"
                     value={formData.referralCode}
                     onChange={(e) => handleChange('referralCode', e.target.value.toUpperCase().replace(/\s/g, ''))}
-                    className="w-full px-2 py-4 bg-transparent text-gray-900 text-lg font-bold placeholder:text-gray-300 focus:outline-none"
+                    className="w-full px-2 py-3 sm:py-4 bg-transparent text-gray-900 text-base sm:text-lg font-bold placeholder:text-gray-300 focus:outline-none"
                     placeholder={t('Enter code')}
                     disabled={isSubmitting}
                   />
@@ -368,7 +368,7 @@ export const SignupPage = () => {
             </div>
 
             <div>
-              <label htmlFor="dateOfBirth" className="block text-sm font-bold text-gray-700 mb-2 ml-1">
+              <label htmlFor="dateOfBirth" className="block text-sm font-bold text-gray-700 mb-2 ml-0.5 sm:ml-1">
                 {t('Date of Birth')}
               </label>
               <div className="relative group text-gray-900">
@@ -382,11 +382,11 @@ export const SignupPage = () => {
                     value={formData.dateOfBirth}
                     onChange={(e) => handleChange('dateOfBirth', e.target.value)}
                     max={new Date(new Date().setFullYear(new Date().getFullYear() - 18)).toISOString().split('T')[0]}
-                    className="w-full px-4 py-4 bg-transparent text-gray-900 text-lg font-bold focus:outline-none invert-calendar-icon"
+                    className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-transparent text-gray-900 text-base sm:text-lg font-bold focus:outline-none invert-calendar-icon"
                     disabled={isSubmitting}
                   />
                 </div>
-                {errors.dateOfBirth && <p className="mt-2 ml-1 text-xs font-bold text-red-500">{errors.dateOfBirth}</p>}
+                {errors.dateOfBirth && <p className="mt-2 ml-0.5 sm:ml-1 text-xs font-bold text-red-500">{errors.dateOfBirth}</p>}
               </div>
             </div>
 
@@ -565,7 +565,7 @@ export const SignupPage = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="relative w-full py-4 bg-premium-pink text-white font-black text-lg rounded-2xl shadow-[0_10px_25px_-5px_rgba(255,77,109,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(255,77,109,0.5)] transform hover:scale-[1.02] active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale overflow-hidden group"
+              className="relative w-full py-3 sm:py-4 bg-premium-pink text-white font-black text-base sm:text-lg rounded-2xl shadow-[0_10px_25px_-5px_rgba(255,77,109,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(255,77,109,0.5)] transform hover:scale-[1.02] active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:grayscale overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine transition-transform" />
               {isSubmitting ? (

@@ -107,7 +107,7 @@ export const LoginPage = () => {
         </div>
 
         {/* Form Card */}
-        <div className="glass-card rounded-[3rem] p-8 w-full border-t border-white/60">
+        <div className="glass-card rounded-[2rem] sm:rounded-[3rem] p-5 sm:p-8 w-full border-t border-white/60">
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold text-gray-800">{t('Welcome Back')}</h2>
             <p className="text-gray-500 font-medium text-sm">{t('Login to continue your journey')}</p>
@@ -121,7 +121,7 @@ export const LoginPage = () => {
               </label>
               <div className="relative group">
                 <div className={`flex items-center glass-input rounded-2xl overflow-hidden transition-all duration-300 ${errors.phone ? 'ring-2 ring-red-400 border-transparent' : 'focus-within:ring-2 focus-within:ring-pink-500'}`}>
-                  <div className="flex items-center shrink-0 gap-1.5 pl-4 pr-3 py-4 bg-white/20 border-r border-white/40">
+                  <div className="flex items-center shrink-0 gap-1.5 pl-3 pr-2 py-3 sm:pl-4 sm:pr-3 sm:py-4 bg-white/20 border-r border-white/40">
                     <img
                       src="https://flagcdn.com/w40/in.png"
                       srcSet="https://flagcdn.com/w80/in.png 2x"
@@ -129,14 +129,14 @@ export const LoginPage = () => {
                       className="rounded-sm shadow-sm"
                       alt="India Flag"
                     />
-                    <span className="text-gray-900 font-black text-base tracking-tight">+91</span>
+                    <span className="text-gray-900 font-black text-sm sm:text-base tracking-tight">+91</span>
                   </div>
                   <input
                     id="phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleChange(e.target.value)}
-                    className="w-full px-4 py-4 bg-transparent text-gray-900 text-lg font-bold placeholder:text-gray-400 focus:outline-none"
+                    className="w-full px-3 py-3 sm:px-4 sm:py-4 bg-transparent text-gray-900 text-base sm:text-lg font-bold placeholder:text-gray-400 focus:outline-none"
                     placeholder="Mobile"
                     maxLength={10}
                   />
@@ -144,9 +144,9 @@ export const LoginPage = () => {
                     <button
                       type="button"
                       onClick={() => setFormData({ phone: '' })}
-                      className="pr-4 text-gray-400 hover:text-pink-500 transition-colors"
+                      className="pr-3 sm:pr-4 text-gray-400 hover:text-pink-500 transition-colors"
                     >
-                      <MaterialSymbol name="cancel" size={24} filled />
+                      <MaterialSymbol name="cancel" size={20} className="sm:scale-110" filled />
                     </button>
                   )}
                 </div>
@@ -176,7 +176,7 @@ export const LoginPage = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className={`w-full py-4 bg-premium-pink text-white font-black text-lg rounded-2xl hover:shadow-[0_10px_20px_-5px_rgba(244,63,94,0.4)] transition-all duration-300 transform active:scale-95 group relative overflow-hidden ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+              className={`w-full py-3 sm:py-4 bg-premium-pink text-white font-black text-base sm:text-lg rounded-2xl hover:shadow-[0_10px_20px_-5px_rgba(244,63,94,0.4)] transition-all duration-300 transform active:scale-95 group relative overflow-hidden ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
               <span className="relative z-10 flex items-center justify-center gap-2">
