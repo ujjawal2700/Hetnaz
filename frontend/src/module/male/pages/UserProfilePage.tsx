@@ -119,7 +119,7 @@ export const UserProfilePage = () => {
     if (navigator.share && profile) {
       try {
         await navigator.share({
-          title: `Check out ${profile.name}'s profile on HETNAZ`,
+          title: `Check out ${profile.name}'s profile on Dil Mate`,
           url: window.location.href,
         });
       } catch (err) {

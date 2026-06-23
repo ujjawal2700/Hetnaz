@@ -56,11 +56,11 @@ const GlobalStateContext = createContext<GlobalState | undefined>(undefined);
 
 // Local storage keys
 const STORAGE_KEYS = {
-    USER: 'hetnaz_user',
-    TOKEN: 'hetnaz_auth_token',
-    BALANCE_CACHE: 'hetnaz_balance_cache',
-    CHAT_CACHE: 'hetnaz_chat_cache',
-    NOTIFICATIONS: 'hetnaz_notifications_persistent',
+    USER: 'dil_mate_user',
+    TOKEN: 'dil_mate_auth_token',
+    BALANCE_CACHE: 'dil_mate_balance_cache',
+    CHAT_CACHE: 'dil_mate_chat_cache',
+    NOTIFICATIONS: 'dil_mate_notifications_persistent',
 };
 
 interface GlobalStateProviderProps {

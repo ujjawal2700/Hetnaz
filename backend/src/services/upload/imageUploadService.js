@@ -20,7 +20,7 @@ export const uploadImageToCloudinary = async (base64Image, folder = 'chat-images
         }
 
         const result = await cloudinary.uploader.upload(base64Image, {
-            folder: `hetnaz/${folder}`,
+            folder: `dil_mate/${folder}`,
             resource_type: 'image',
             transformation: [
                 { width: 1200, height: 1200, crop: 'limit' }, // Max dimensions

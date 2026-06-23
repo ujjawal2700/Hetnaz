@@ -29,12 +29,12 @@ export const ReferralPage = () => {
         setTimeout(() => setCopied(false), 2000);
     };
 
-    const shareMessage = `Hey! Join me on HETNAZ and find amazing connections. Use my referral ID: ${referralId} during signup to get a special bonus! 🚀`;
+    const shareMessage = `Hey! Join me on Dil Mate and find amazing connections. Use my referral ID: ${referralId} during signup to get a special bonus! 🚀`;
 
     const handleShare = () => {
         if (navigator.share) {
             navigator.share({
-                title: 'Join HETNAZ',
+                title: 'Join Dil Mate',
                 text: shareMessage,
                 url: window.location.origin,
             });

@@ -175,8 +175,8 @@ export const OtpVerificationPage = () => {
                     <div className="relative mb-2">
                         <div className="absolute inset-0 bg-gold/20 blur-2xl rounded-full animate-gold-pulse" />
                         <img 
-                            src="/Hetnaz.png" 
-                            alt="HETNAZ Logo" 
+                            src="/DilMate.png" 
+                            alt="Dil Mate Logo" 
                             className="relative w-36 h-36 object-contain" 
                         />
                     </div>

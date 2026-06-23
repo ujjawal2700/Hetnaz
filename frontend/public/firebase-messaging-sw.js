@@ -46,7 +46,7 @@ try {
         const notificationTitle = payload.notification?.title || 'New Message';
         const notificationOptions = {
             body: payload.notification?.body || 'You have a new notification',
-            icon: payload.notification?.icon || '/Hetnaz.png',
+            icon: payload.notification?.icon || '/DilMate.png',
             badge: '/badge-72x72.png',
             tag: payload.data?.chatId || 'default',
             data: payload.data,

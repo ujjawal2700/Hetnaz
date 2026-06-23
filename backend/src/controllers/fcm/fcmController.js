@@ -78,8 +78,8 @@ export const sendTestNotification = async (req, res, next) => {
 
         const notification = {
             title: '🎉 Test Notification',
-            body: 'This is a test push notification from HETNAZ!',
-            icon: '/Hetnaz.png'
+            body: 'This is a test push notification from Dil Mate!',
+            icon: '/DilMate.png'
         };
 
         const data = { type: 'test', timestamp: new Date().toISOString() };

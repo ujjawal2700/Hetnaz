@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const uri = "mongodb://Dating-User:datingUserAssociate@ac-wlx5klx-shard-00-00.j03pv5w.mongodb.net:27017/hetnaz?ssl=true&authSource=admin";
+const uri = "mongodb://Dating-User:datingUserAssociate@ac-wlx5klx-shard-00-00.j03pv5w.mongodb.net:27017/dil_mate?ssl=true&authSource=admin";
 console.log('Testing URI:', uri);
 
 async function test() {

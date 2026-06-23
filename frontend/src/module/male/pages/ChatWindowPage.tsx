@@ -750,7 +750,7 @@ export const ChatWindowPage = () => {
               )}
             </h1>
             <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-4 tracking-tight">
-              Hetnaz User • {chatInfo.otherUser.isOnline ? 'Active Now' : 'Recently Active'}
+              Dil Mate User • {chatInfo.otherUser.isOnline ? 'Active Now' : 'Recently Active'}
             </p>
             
             {/* Stats row like Instagram */}

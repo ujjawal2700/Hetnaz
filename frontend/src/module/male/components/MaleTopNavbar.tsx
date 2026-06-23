@@ -20,8 +20,8 @@ export const MaleTopNavbar = ({ title }: MaleTopNavbarProps) => {
           </div>
         ) : (
           <div className="flex items-center gap-3">
-            <img src="/Hetnaz.png" alt="HETNAZ" className="w-14 h-14 object-cover rounded-3xl shadow-sm border border-white/40 dark:border-white/5" />
-            <span className="text-3xl font-black tracking-tight bg-gradient-to-r from-pink-600 to-rose-600 dark:from-pink-400 dark:to-rose-400 bg-clip-text text-transparent drop-shadow-sm uppercase">HETNAZ</span>
+            <img src="/DilMate.png" alt="Dil Mate" className="w-14 h-14 object-cover rounded-3xl shadow-sm border border-white/40 dark:border-white/5" />
+            <span className="text-3xl font-black tracking-tight bg-gradient-to-r from-pink-600 to-rose-600 dark:from-pink-400 dark:to-rose-400 bg-clip-text text-transparent drop-shadow-sm uppercase">Dil Mate</span>
           </div>
         )}
 

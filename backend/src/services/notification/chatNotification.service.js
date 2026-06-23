@@ -45,17 +45,17 @@ export const notifyNewMessage = async (receiverId, sender, messageData) => {
 
         // Helper: Validate icon URL (avoid base64, only use HTTP URLs)
         const getValidIconUrl = (url) => {
-            if (!url || typeof url !== 'string') return '/Hetnaz.png';
-            if (url.startsWith('data:')) return '/Hetnaz.png'; // Skip base64
+            if (!url || typeof url !== 'string') return '/DilMate.png';
+            if (url.startsWith('data:')) return '/DilMate.png'; // Skip base64
             if (url.startsWith('http://') || url.startsWith('https://')) return url;
-            return '/Hetnaz.png'; // Default
+            return '/DilMate.png'; // Default
         };
 
         switch (messageData.messageType) {
             case 'image':
                 title = `📸 ${senderName}`;
                 body = 'Sent you a photo';
-                icon = '/Hetnaz.png';
+                icon = '/DilMate.png';
                 break;
 
             case 'gift': {
@@ -167,7 +167,7 @@ export const notifyVideoCall = async (receiverId, caller, callId) => {
             const result = await fcmService.sendNotification(token, {
                 title,
                 body,
-                icon: caller.profile?.photos?.[0]?.url || '/Hetnaz.png'
+                icon: caller.profile?.photos?.[0]?.url || '/DilMate.png'
             }, data);
 
             results.push(result);
@@ -226,7 +226,7 @@ export const notifyLowBalance = async (userId, currentBalance) => {
             const result = await fcmService.sendNotification(token, {
                 title,
                 body,
-                icon: '/Hetnaz.png'
+                icon: '/DilMate.png'
             }, data);
             results.push(result);
         }
@@ -272,7 +272,7 @@ export const notifyDailyReward = async (userId, rewardAmount = 10) => {
             const result = await fcmService.sendNotification(token, {
                 title,
                 body,
-                icon: '/Hetnaz.png'
+                icon: '/DilMate.png'
             }, data);
             results.push(result);
         }
@@ -313,10 +313,10 @@ export const notifyNewNearbyUser = async (maleUserId, femaleUser, distance = nul
 
         // Helper: Validate icon URL
         const getValidIconUrl = (url) => {
-            if (!url || typeof url !== 'string') return '/Hetnaz.png';
-            if (url.startsWith('data:')) return '/Hetnaz.png';
+            if (!url || typeof url !== 'string') return '/DilMate.png';
+            if (url.startsWith('data:')) return '/DilMate.png';
             if (url.startsWith('http://') || url.startsWith('https://')) return url;
-            return '/Hetnaz.png';
+            return '/DilMate.png';
         };
 
         const data = {

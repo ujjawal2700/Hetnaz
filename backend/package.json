@@ -1,5 +1,5 @@
 {
-  "name": "hetnaz-backend",
+  "name": "dil-mate-backend",
   "version": "1.0.0",
   "description": "MatchMint Dating App Backend - Node.js + Express + MongoDB + Socket.IO",
   "main": "src/server.js",
@@ -15,7 +15,7 @@
   },
   "keywords": [
     "dating",
-    "hetnaz",
+    "dil-mate",
     "backend",
     "express",
     "mongodb",

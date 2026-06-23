@@ -62,9 +62,9 @@ export const FemaleSidebar = ({ isOpen, onClose, items, onItemClick }: FemaleSid
         <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 overflow-hidden flex items-center justify-center shadow-sm bg-white">
-              <img src="/HETNAZlogo.jpg" alt="HETNAZ" className="w-full h-full object-cover" />
+              <img src="/DilMatelogo.jpg" alt="Dil Mate" className="w-full h-full object-cover" />
             </div>
-            <span className="text-lg font-bold text-pink-600 dark:text-pink-400">HETNAZ</span>
+            <span className="text-lg font-bold text-pink-600 dark:text-pink-400">Dil Mate</span>
           </div>
           <button
             onClick={onClose}
@@ -123,7 +123,7 @@ export const FemaleSidebar = ({ isOpen, onClose, items, onItemClick }: FemaleSid
         {/* Footer */}
         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700">
           <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
-            HETNAZ © {new Date().getFullYear()}
+            Dil Mate © {new Date().getFullYear()}
           </div>
         </div>
       </div>

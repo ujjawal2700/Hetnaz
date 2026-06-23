@@ -20,7 +20,7 @@ import {
  * BMAD MODEL: Profile Photo Upload Config
  */
 const PROFILE_PHOTO_CONFIG: UploadConfig = {
-  folder: 'hetnaz/profiles',
+  folder: 'dil_mate/profiles',
   resourceType: 'image',
   maxFileSize: 5 * 1024 * 1024, // 5MB
   allowedFormats: ['jpg', 'jpeg', 'png', 'webp'],
@@ -36,7 +36,7 @@ const PROFILE_PHOTO_CONFIG: UploadConfig = {
  * BMAD MODEL: Verification Document Upload Config
  */
 const VERIFICATION_DOC_CONFIG: UploadConfig = {
-  folder: 'hetnaz/verification',
+  folder: 'dil_mate/verification',
   resourceType: 'image',
   maxFileSize: 10 * 1024 * 1024, // 10MB
   allowedFormats: ['jpg', 'jpeg', 'png', 'pdf'],
@@ -49,7 +49,7 @@ const VERIFICATION_DOC_CONFIG: UploadConfig = {
  * BMAD MODEL: Chat Image Upload Config
  */
 const CHAT_IMAGE_CONFIG: UploadConfig = {
-  folder: 'hetnaz/chat',
+  folder: 'dil_mate/chat',
   resourceType: 'image',
   maxFileSize: 5 * 1024 * 1024, // 5MB
   allowedFormats: ['jpg', 'jpeg', 'png', 'gif', 'webp'],

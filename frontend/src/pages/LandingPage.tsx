@@ -22,9 +22,9 @@ export const LandingPage = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="flex flex-col items-center justify-center mb-6">
-              <img src="/HETNAZlogo.jpg" alt="HETNAZ Logo" className="w-24 h-24 md:w-32 md:h-32 shadow-2xl mb-6 object-cover" />
+              <img src="/DilMatelogo.jpg" alt="Dil Mate Logo" className="w-24 h-24 md:w-32 md:h-32 shadow-2xl mb-6 object-cover" />
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 bg-clip-text text-transparent">
-                HETNAZ
+                Dil Mate
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-700 mb-4 max-w-2xl mx-auto">
@@ -58,7 +58,7 @@ export const LandingPage = () => {
               <div className="bg-gradient-to-br from-pink-100 to-pink-200 rounded-3xl p-8 shadow-2xl">
                 <div className="bg-white rounded-2xl p-4 shadow-lg">
                   <div className="aspect-[9/16] bg-gradient-to-br from-pink-50 to-white rounded-xl flex items-center justify-center">
-                    <img src="/HETNAZlogo.jpg" alt="HETNAZ" className="w-32 h-32 object-cover shadow-lg" />
+                    <img src="/DilMatelogo.jpg" alt="Dil Mate" className="w-32 h-32 object-cover shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export const LandingPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
-            Why Choose HETNAZ?
+            Why Choose Dil Mate?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
@@ -150,7 +150,7 @@ export const LandingPage = () => {
             Ready to Find Your Match?
           </h2>
           <p className="text-xl text-pink-100 mb-8">
-            Join HETNAZ today and start your journey to meaningful connections.
+            Join Dil Mate today and start your journey to meaningful connections.
           </p>
           <button
             onClick={handleGetStarted}
@@ -168,7 +168,7 @@ export const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent">
-                HETNAZ
+                Dil Mate
               </h3>
               <p className="text-gray-400">
                 Find your perfect match today.
@@ -200,7 +200,7 @@ export const LandingPage = () => {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} HETNAZ. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Dil Mate. All rights reserved.</p>
           </div>
         </div>
       </footer>

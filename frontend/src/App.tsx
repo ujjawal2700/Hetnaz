@@ -110,7 +110,7 @@ function AppContent() {
     return (
       <div className="flex h-screen items-center justify-center bg-background-light dark:bg-background-dark">
         <div className="flex flex-col items-center gap-4">
-          <img src="/HETNAZlogo.jpg" alt="HETNAZ" className="w-20 h-20 rounded-full shadow-lg animate-pulse" />
+          <img src="/DilMatelogo.jpg" alt="Dil Mate" className="w-20 h-20 rounded-full shadow-lg animate-pulse" />
           <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
         </div>
       </div>

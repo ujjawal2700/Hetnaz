@@ -113,9 +113,9 @@ export const AdminSidebar = ({ isOpen, onClose, items, onItemClick, isCollapsed 
         <div className="flex items-center justify-between px-4 py-3 border-b border-[#2c3338] h-[57px] bg-[#1d2327]">
           <div className={`flex items-center gap-2 transition-opacity duration-300 ${isCollapsed ? 'lg:opacity-0 lg:w-0' : 'opacity-100'}`}>
             <div className="w-8 h-8 flex items-center justify-center overflow-hidden shadow-md">
-              <img src="/HETNAZlogo.jpg" alt="HETNAZ" className="w-full h-full object-cover" />
+              <img src="/DilMatelogo.jpg" alt="Dil Mate" className="w-full h-full object-cover" />
             </div>
-            <span className="text-sm font-semibold text-white whitespace-nowrap">HETNAZ Admin</span>
+            <span className="text-sm font-semibold text-white whitespace-nowrap">Dil Mate Admin</span>
           </div>
 
           {/* Collapse Toggle - Desktop only */}
@@ -221,7 +221,7 @@ export const AdminSidebar = ({ isOpen, onClose, items, onItemClick, isCollapsed 
         {/* Footer */}
         <div className={`absolute bottom-0 left-0 right-0 p-3 border-t border-[#2c3338] bg-[#1d2327] transition-opacity duration-300 ${isCollapsed ? 'lg:opacity-0' : 'opacity-100'}`}>
           <div className="text-[10px] text-[#787c82] text-center">
-            © {new Date().getFullYear()} HETNAZ Admin
+            © {new Date().getFullYear()} Dil Mate Admin
           </div>
         </div>
       </div>
