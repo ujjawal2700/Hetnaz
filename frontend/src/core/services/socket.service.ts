@@ -24,7 +24,7 @@ class SocketService {
      * Connect to Socket.IO server (SINGLETON - one connection per session)
      */
     connect() {
-        const token = localStorage.getItem('hetnaz_auth_token');
+        const token = localStorage.getItem('dil_mate_auth_token');
 
         if (!token) {
             return;

@@ -15,7 +15,7 @@ interface QueuedMessage {
 }
 
 class OfflineQueueService {
-    private readonly QUEUE_KEY = 'hetnaz_message_queue';
+    private readonly QUEUE_KEY = 'dil_mate_message_queue';
     private readonly MAX_RETRIES = 3;
     private isProcessing = false;
     private onlineCallback: (() => void) | null = null;

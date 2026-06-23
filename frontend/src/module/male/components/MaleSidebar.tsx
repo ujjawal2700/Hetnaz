@@ -62,9 +62,9 @@ export const MaleSidebar = ({ isOpen, onClose, items, onItemClick }: MaleSidebar
         <div className="flex items-center justify-between p-5 border-b border-pink-200/50 dark:border-pink-900/30 bg-gradient-to-r from-pink-50 to-rose-50 dark:from-[#2d1a24] dark:to-[#3d2530]">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 shadow-md overflow-hidden bg-white">
-              <img src="/HETNAZlogo.jpg" alt="HETNAZ" className="w-full h-full object-cover" />
+              <img src="/DilMatelogo.jpg" alt="Dil Mate" className="w-full h-full object-cover" />
             </div>
-            <span className="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 dark:from-pink-400 dark:to-rose-400 bg-clip-text text-transparent">HETNAZ</span>
+            <span className="text-lg font-bold bg-gradient-to-r from-pink-600 to-rose-600 dark:from-pink-400 dark:to-rose-400 bg-clip-text text-transparent">Dil Mate</span>
           </div>
           <button
             onClick={onClose}
@@ -123,7 +123,7 @@ export const MaleSidebar = ({ isOpen, onClose, items, onItemClick }: MaleSidebar
         {/* Footer */}
         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-pink-200/50 dark:border-pink-900/30 bg-gradient-to-r from-pink-50/50 to-rose-50/50 dark:from-[#2d1a24]/50 dark:to-[#3d2530]/50">
           <div className="text-xs text-pink-600/70 dark:text-pink-400/70 text-center font-medium">
-            HETNAZ © {new Date().getFullYear()}
+            Dil Mate © {new Date().getFullYear()}
           </div>
         </div>
       </div>

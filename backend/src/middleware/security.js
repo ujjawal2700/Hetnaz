@@ -19,9 +19,9 @@ export const corsOptions = {
     if (!origin) return callback(null, true);
 
     const allowedOrigins = [
-      'https://hetnaz.in',
-      'https://www.hetnaz.in',
-      'https://api.hetnaz.in',
+      'https://dilmate.in',
+      'https://www.dilmate.in',
+      'https://api.dilmate.in',
       'http://localhost:5173',
       'http://localhost:3000',
       'http://localhost:5000'

@@ -91,14 +91,17 @@ export const updateCoinPlan = async (req, res, next) => {
         const { id } = req.params;
         const updates = req.body;
 
-        const plan = await CoinPlan.findByIdAndUpdate(id, updates, {
-            new: true,
-            runValidators: true
-        });
+        const plan = await CoinPlan.findById(id);
 
         if (!plan) {
             throw new NotFoundError('Coin plan not found');
         }
+
+        // Apply updates
+        Object.assign(plan, updates);
+
+        // Save plan (triggers pre-save hooks to recalculate totalCoins and bonusPercentage)
+        await plan.save();
 
         res.status(200).json({
             status: 'success',
@@ -108,6 +111,7 @@ export const updateCoinPlan = async (req, res, next) => {
         next(error);
     }
 };
+
 
 /**
  * Delete a coin plan (Admin only - soft delete by setting isActive: false)

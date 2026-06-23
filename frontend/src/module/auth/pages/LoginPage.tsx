@@ -97,8 +97,8 @@ export const LoginPage = () => {
           <div className="relative mb-2">
             <div className="absolute inset-0 bg-gold/20 blur-2xl rounded-full scale-150 animate-pulse-soft" />
             <img 
-              src="/Hetnaz.png" 
-              alt="HETNAZ Logo" 
+              src="/DilMate.png" 
+              alt="Dil Mate Logo" 
               className="w-32 h-32 object-contain relative z-10" 
             />
           </div>

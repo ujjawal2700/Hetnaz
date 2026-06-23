@@ -1,7 +1,7 @@
 const CACHE_VERSION = 'v2';
-const STATIC_CACHE = `hetnaz-static-${CACHE_VERSION}`;
-const DYNAMIC_CACHE = `hetnaz-dynamic-${CACHE_VERSION}`;
-const API_CACHE = `hetnaz-api-${CACHE_VERSION}`;
+const STATIC_CACHE = `dil_mate-static-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `dil_mate-dynamic-${CACHE_VERSION}`;
+const API_CACHE = `dil_mate-api-${CACHE_VERSION}`;
 
 // Critical assets to precache (app shell)
 const STATIC_ASSETS = [
@@ -35,7 +35,7 @@ self.addEventListener('activate', (event) => {
             return Promise.all(
                 cacheNames
                     .filter((name) => {
-                        return name.startsWith('hetnaz-') &&
+                        return name.startsWith('dil_mate-') &&
                             !name.includes(CACHE_VERSION);
                     })
                     .map((name) => caches.delete(name))

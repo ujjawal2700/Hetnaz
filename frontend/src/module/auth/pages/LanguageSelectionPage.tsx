@@ -72,10 +72,10 @@ export const LanguageSelectionPage = () => {
                 {/* Header */}
                 <div className="text-center mb-8">
                     <div className="flex justify-center mb-6">
-                        <img src="/HETNAZlogo.jpg" alt="HETNAZ Logo" className="w-24 h-24 shadow-2xl object-cover" />
+                        <img src="/DilMatelogo.jpg" alt="Dil Mate Logo" className="w-24 h-24 shadow-2xl object-cover" />
                     </div>
                     <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-pink-500 to-pink-600 bg-clip-text text-transparent">
-                        HETNAZ
+                        Dil Mate
                     </h1>
                     <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                         {selectedLanguage === 'en' ? 'Choose Your Language' : 'अपनी भाषा चुनें'}

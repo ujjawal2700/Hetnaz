@@ -9,8 +9,8 @@ import mongoose from 'mongoose';
 const appSettingsSchema = new mongoose.Schema(
     {
         general: {
-            platformName: { type: String, default: 'HETNAZ' },
-            supportEmail: { type: String, default: 'support@hetnaz.com' },
+            platformName: { type: String, default: 'Dil Mate' },
+            supportEmail: { type: String, default: 'support@dilmate.com' },
             supportPhone: { type: String, default: '+91 9876543210' },
             termsOfServiceUrl: { type: String, default: '' },
             privacyPolicyUrl: { type: String, default: '' },

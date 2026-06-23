@@ -1,7 +1,7 @@
-# HETNAZ (MatchMint) - Project Context
+# Dil Mate (MatchMint) - Project Context
 
 ## Project Overview
-HETNAZ is a premium dating and social interaction platform designed to facilitate meaningful connections between users through real-time communication, video calling, and a gamified coin-based economy. The platform distinguishes between male and female user roles, each with specialized features and monetization models.
+Dil Mate is a premium dating and social interaction platform designed to facilitate meaningful connections between users through real-time communication, video calling, and a gamified coin-based economy. The platform distinguishes between male and female user roles, each with specialized features and monetization models.
 
 ## Technology Stack
 

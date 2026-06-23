@@ -104,7 +104,7 @@ export const VerificationPendingPage = () => {
         <div className="min-h-screen bg-pink-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
                 <div className="flex justify-center mb-6">
-                    <img src="/HETNAZlogo.jpg" alt="HETNAZ Logo" className="w-16 h-16 shadow-lg object-cover" />
+                    <img src="/DilMatelogo.jpg" alt="Dil Mate Logo" className="w-16 h-16 shadow-lg object-cover" />
                 </div>
 
                 <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-pink-100 mb-6">

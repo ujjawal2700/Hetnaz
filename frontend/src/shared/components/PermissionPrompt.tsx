@@ -33,7 +33,7 @@ export const PermissionPrompt = ({ onRequestPermissions, onDismiss }: Permission
             });
 
             // Mark as requested
-            localStorage.setItem('hetnaz_permissions_requested', 'true');
+            localStorage.setItem('dil_mate_permissions_requested', 'true');
 
             onRequestPermissions();
         } catch (err: any) {
@@ -48,10 +48,10 @@ export const PermissionPrompt = ({ onRequestPermissions, onDismiss }: Permission
             <div className="bg-white dark:bg-[#342d18] rounded-2xl shadow-2xl p-6 max-w-sm w-full mx-4">
                 <div className="text-center mb-4">
                     <div className="flex justify-center mb-4">
-                        <img src="/HETNAZlogo.jpg" alt="HETNAZ" className="w-16 h-16 shadow-lg object-cover" />
+                        <img src="/DilMatelogo.jpg" alt="Dil Mate" className="w-16 h-16 shadow-lg object-cover" />
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                        HETNAZ Permissions
+                        Dil Mate Permissions
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                         To use video calls and find nearby users, please allow access to your camera, microphone, and location.

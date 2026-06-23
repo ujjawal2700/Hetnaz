@@ -82,7 +82,7 @@ export const SearchBar = ({
           <div className="flex items-center gap-2">
             {showLogo && (
               <img 
-                src="/Hetnaz.png" 
+                src="/DilMate.png" 
                 alt="Logo" 
                 className={`h-14 w-14 object-contain shrink-0 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
                   isExpanded ? '-translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
@@ -98,7 +98,7 @@ export const SearchBar = ({
                 ? 'text-slate-900 dark:text-white' 
                 : 'bg-gradient-to-r from-pink-600 to-rose-600 dark:from-pink-400 dark:to-rose-400 bg-clip-text text-transparent'
             }`}>
-              {title || 'Hetnaz'}
+              {title || 'Dil Mate'}
             </span>
           </div>
         </div>

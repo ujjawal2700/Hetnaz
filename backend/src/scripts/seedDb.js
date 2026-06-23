@@ -14,8 +14,8 @@ const SEED_DATA = {
   // 1. App Settings
   appSettings: {
     general: {
-      platformName: 'HETNAZ',
-      supportEmail: 'support@hetnaz.com',
+      platformName: 'Dil Mate',
+      supportEmail: 'support@dilmate.com',
       supportPhone: '+91 919981331303',
       maintenanceMode: false,
     },
@@ -165,7 +165,7 @@ const SEED_DATA = {
     role: 'admin',
     isVerified: true,
     profile: {
-      name: 'HETNAZ Admin'
+      name: 'Dil Mate Admin'
     }
   },
 
